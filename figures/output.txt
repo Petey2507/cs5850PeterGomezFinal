@@ -1,0 +1,49 @@
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:            MedHouseVal   R-squared:                       0.598
+Model:                            OLS   Adj. R-squared:                  0.598
+Method:                 Least Squares   F-statistic:                     4100.
+Date:                Tue, 03 Dec 2024   Prob (F-statistic):               0.00
+Time:                        00:45:50   Log-Likelihood:                -18292.
+No. Observations:               16512   AIC:                         3.660e+04
+Df Residuals:                   16505   BIC:                         3.665e+04
+Df Model:                           6
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const        -39.1342      0.736    -53.161      0.000     -40.577     -37.691
+MedInc         0.3711      0.003    108.188      0.000       0.364       0.378
+HouseAge       0.0096      0.001     19.151      0.000       0.009       0.011
+AveRooms       0.0193      0.003      7.162      0.000       0.014       0.025
+Latitude      -0.4599      0.008    -58.044      0.000      -0.475      -0.444
+Longitude     -0.4665      0.008    -55.801      0.000      -0.483      -0.450
+Population -5.853e-06   5.32e-06     -1.100      0.272   -1.63e-05    4.58e-06
+==============================================================================
+Omnibus:                     3545.706   Durbin-Watson:                   1.964
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8975.749
+Skew:                           1.176   Prob(JB):                         0.00
+Kurtosis:                       5.741   Cond. No.                     2.36e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.36e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Mean Squared Error on test set: 0.5485
+Accuracy: 0.7403
+[[1079  258   41]
+ [ 241  916  233]
+ [  48  251 1061]]
+Classification Report:
+              precision    recall  f1-score   support
+
+         Low       0.79      0.78      0.79      1360
+      Medium       0.79      0.78      0.79      1378
+        High       0.64      0.66      0.65      1390
+
+    accuracy                           0.74      4128
+   macro avg       0.74      0.74      0.74      4128
+weighted avg       0.74      0.74      0.74      4128
+
+Map saved successfully as 'california_categorized_visualization.html'
